@@ -3,6 +3,7 @@ This is the repository for the university web development course. It will contai
 
 # Student information
 | Name  |   Alexander Burkush |
+| ------------- |:-------------:|
 | Group     | KI-48     |
 | Number      | 4    |
 | Task     | DDOS website     |
