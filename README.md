@@ -2,7 +2,7 @@
 This is the repository for the university web development course. It will contain 5 laboratory projects which you can access through branches.
 
 # Student information
-| Name  |   Alexander Burkush |
+|Name  |   Alexander Burkush |
 | ------------- |:-------------:|
 | Group     | KI-48     |
 | Number      | 4    |
