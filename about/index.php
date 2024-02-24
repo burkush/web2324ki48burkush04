@@ -12,7 +12,7 @@
 
   <header class="header">
     <div class="header__container container">
-      <a href="/portfolio">
+      <a href="/">
         <img src="../assets/img/cat.svg" alt="Cat" width="40" height="40">
       </a>
 
@@ -29,6 +29,11 @@
           </li>
         </ul>
       </nav>
+
+      <div class="header__account">
+        <a href="/portfolio/login" class="header__btn">Увійти</a>
+        <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+      </div>
     </div>
   </header>
 

@@ -1,13 +1,12 @@
 <?php
 
-$user = "root";
-$password = "";
-$dbname = "web";
+/* 
+  7ibe]F&3S4^3 - website password
+  Sign in to 000webapp using Google account
+  On local machine, change the links to prepend with /portfolio/<href>
+*/
 
-$conn = new mysqli('localhost', $user, $password, $dbname);
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+require_once "../config/database/connectDB.php";
 
 $name = $_POST["name"];
 $email = $_POST["email"];

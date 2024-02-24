@@ -1,14 +1,23 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("Location: ../login");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Повідомлення успішно надіслано!</title>
+  <title><?php echo htmlspecialchars($_SESSION["username"]); ?></title>
   <link rel="stylesheet" href="../assets/styles/main.css">
   <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
 </head>
-
 <body>
   <div class="wrapper">
 
@@ -33,18 +42,18 @@
         </nav>
 
         <div class="header__account">
-          <a href="/portfolio/login" class="header__btn">Увійти</a>
-          <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+          <a href="/portfolio/logout" class="header__btn">Вийти</a>
         </div>
       </div>
     </header>
 
-    <main class="page status-page">
-      <h2 class="page__title contact__title title">Повідомлення успішно надіслано!</h2>
-
-      <img src="../assets/img/success.svg" alt="Success" width="300">
+    <main class="page">
+      <div class="page__container profile">
+        <section class="page__greeting">
+          <h1 class="page__title title profile__title">Привіт, <?php echo htmlspecialchars($_SESSION["username"]); ?>!</h1>
+          <img src="../assets/img/profile.jpg" alt="Profile picture">
+      </div>
     </main>
   </div>
 </body>
-
 </html>

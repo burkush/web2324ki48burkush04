@@ -12,7 +12,7 @@
 
   <header class="header">
     <div class="header__container container">
-      <a href="/portfolio">
+      <a href="/">
         <img src="../assets/img/cat.svg" alt="Cat" width="40" height="40">
       </a>
 
@@ -29,13 +29,18 @@
           </li>
         </ul>
       </nav>
+
+      <div class="header__account">
+        <a href="/portfolio/login" class="header__btn">Увійти</a>
+        <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+      </div>
     </div>
   </header>
 
   <main class="page">
-    <h2 class="page__title contact__title title">Зв'яжіться зі мною</h2>
+    <h2 class="page__title form__title title">Зв'яжіться зі мною</h2>
 
-    <form class="contact" action="message.php" method="post">
+    <form class="form" action="message.php" method="post">
       <label for="name">Ім'я:</label>
       <input type="text" id="name" name="name" required>
 
@@ -45,7 +50,7 @@
       <label for="message">Повідомлення:</label>
       <textarea id="message" name="message" required></textarea>
 
-      <button type="submit">Відправити</button>
+      <button type="submit" class="button">Відправити</button>
     </form>
   </main>
   </div>

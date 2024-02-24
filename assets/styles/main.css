@@ -28,6 +28,11 @@ td:first-child {
   font-weight: 500;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -45,6 +50,12 @@ td:first-child {
   font-size: 1.2rem;
 }
 
+.alert {
+  color: #fc363b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 /* Header */
 
 .header {
@@ -59,6 +70,27 @@ td:first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__account {
+  font-family: 'Noto-Sans', sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+
+.header__btn {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #111;
+  border-radius: 4px;
+}
+
+.header__btn:hover {
+  background-color: #111;
+  color: #fafafa;
 }
 
 .navigation {
@@ -121,13 +153,13 @@ td:first-child {
 }
 
 .button {
-  padding: 0.25rem;
-  margin-bottom: 30px;
+  padding: 0.5rem 1rem;
+  margin: 15px 0;
 }
 
-/* Contact */
+/* Form */
 
-.contact {
+.form {
   width: 500px;
   margin: 0 auto;
   padding: 20px;
@@ -135,7 +167,7 @@ td:first-child {
   border-radius: 5px;
 }
 
-.contact label {
+.form label {
   display: block;
   margin-bottom: 5px;
 }
@@ -145,8 +177,8 @@ textarea {
   font-family: "Noto Sans", sans-serif;
 }
 
-.contact input,
-.contact textarea {
+.form input,
+.form textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -154,20 +186,37 @@ textarea {
   margin-bottom: 10px;
 }
 
-.contact textarea {
+.form textarea {
   height: 100px;
   resize: vertical;
 }
 
-.contact button {
-  padding: 0.25rem;
+.form button {
+  display: block;
+  margin: 0 auto;
 }
 
-.contact__title {
+.form__title {
   text-align: center;
 }
 
 .status-page {
   display: grid;
   place-items: center;
+}
+
+.prompt {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+/* Profile */
+
+.profile {
+  display: grid;
+  place-content: center;
+}
+
+.profile__title {
+  text-align: center;
 }
