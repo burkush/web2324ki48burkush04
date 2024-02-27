@@ -19,20 +19,20 @@
         <nav>
           <ul class="navigation">
             <li>
-              <a href="/portfolio" class="active">Головна</a>
+              <a href="/" class="active">Головна</a>
             </li>
             <li>
-              <a href="/portfolio/about">Про мене</a>
+              <a href="/about">Про мене</a>
             </li>
             <li>
-              <a href="/portfolio/contact">Контакти</a>
+              <a href="/contact">Контакти</a>
             </li>
           </ul>
         </nav>
 
         <div class="header__account">
-          <a href="/portfolio/login" class="header__btn">Увійти</a>
-          <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+          <a href="/login" class="header__btn">Увійти</a>
+          <a href="/register" class="header__btn">Реєстрація</a>
         </div>
       </div>
     </header>
@@ -44,7 +44,7 @@
           <p class="page__text">
             Даний веб-сайт створений в якості завдання на лабораторну роботу №2 із дисципліни "Технології веб-програмування".
             <br>
-            Також він буде використаний для виконання лабораторної роботи №3 і №4.
+            Також він буде використаний для виконання наступних лабораторних робіт.
           </p>
 
           <h2 class="subtitle title">Коротка інформація</h2>
@@ -69,15 +69,15 @@
               </tr>
               <tr>
                 <td>Технології</td>
-                <td>HTML, CSS, JavaScript, PHP</td>
+                <td>HTML, CSS, JavaScript, PHP, MySQL</td>
               </tr>
             </tbody>
           </table>
 
           <p class="page__text">
-            Для навігації використовуйте меню зверху. Навігація відбувається згідно із умовами завдання, тобто за допомогою методу GET. 
+            Для навігації використовуйте меню зверху. Навігація відбувається згідно із умовами завдання, тобто за допомогою методу <i>GET</i>. 
             <br>
-            Також на інших сторінках продемонстровано роботу AJAX (на сторінці "Про мене") і методу POST (на сторінці "Контакти" при відправці форми на сервер).
+            Також на інших сторінках продемонстровано роботу <i>AJAX</i> (на сторінці "Про мене"). Присутня аутентифікація за допомогою паролю і сервісу <i>Google Auth</i>.
           </p>
         </section>
 

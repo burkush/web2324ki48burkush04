@@ -19,20 +19,20 @@
       <nav>
         <ul class="navigation">
           <li>
-            <a href="/portfolio">Головна</a>
+            <a href="/">Головна</a>
           </li>
           <li>
-            <a href="/portfolio/about" class="active">Про мене</a>
+            <a href="/about" class="active">Про мене</a>
           </li>
           <li>
-            <a href="/portfolio/contact">Контакти</a>
+            <a href="/contact">Контакти</a>
           </li>
         </ul>
       </nav>
 
       <div class="header__account">
-        <a href="/portfolio/login" class="header__btn">Увійти</a>
-        <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+        <a href="/login" class="header__btn">Увійти</a>
+        <a href="/register" class="header__btn">Реєстрація</a>
       </div>
     </div>
   </header>

@@ -1,14 +1,33 @@
 <?php
 
-session_start();
+require_once "../config/database/connectDB.php";
+require_once('../vendor/autoload.php');
 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
-    header("Location: ../profile");
+// Google login
+$clientID = $_SERVER['client_id'];
+$secret = $_SERVER['client_secret'];
+$redirectUri = "https://personweblpnu.000webhostapp.com/profile"; // http://localhost/portfolio/profile
+
+$gclient = new Google_Client();
+$gclient->setClientId($clientID);
+$gclient->setClientSecret($secret);
+$gclient->setRedirectUri($redirectUri);
+$gclient->addScope('email');
+$gclient->addScope('profile');
+ 
+if(isset($_GET['code'])) {
+
+    $token = $gclient->fetchAccessTokenWithAuthCode($_GET['code']);
+    $gclient->setAccessToken($token);
+
+    session_start();
+    $_SESSION["loggedin"] = true;
+    $_SESSION['ucode'] = $_GET['code'];
+
     exit;
 }
 
-require_once "../config/database/connectDB.php";
- 
+// Regular login
 $username = $password = "";
 $login_err = "";
 
@@ -26,14 +45,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         if(mysqli_stmt_execute($stmt)){
             mysqli_stmt_store_result($stmt);
             
-            // Check if username exists, if yes then verify password
             if(mysqli_stmt_num_rows($stmt) == 1) {                    
                 mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
 
                 if(mysqli_stmt_fetch($stmt)){
-                    if(password_verify($password, $hashed_password)){
-                        require_once "../config/profile/startSession.php";
-                    } else{
+                    if(password_verify($password, $hashed_password)) {
+                        session_start();
+                        $_SESSION["loggedin"] = true;                         
+                        header("Location: ../profile");
+                    } else {
                         $login_err = "Неправильне ім'я користувача або пароль.";
                     }
                 }
@@ -72,20 +92,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           <nav>
             <ul class="navigation">
               <li>
-                <a href="/portfolio">Головна</a>
+                <a href="/">Головна</a>
               </li>
               <li>
-                <a href="/portfolio/about">Про мене</a>
+                <a href="/about">Про мене</a>
               </li>
               <li>
-                <a href="/portfolio/contact">Контакти</a>
+                <a href="/contact">Контакти</a>
               </li>
             </ul>
           </nav>
 
         <div class="header__account">
-          <a href="/portfolio/login" class="header__btn">Увійти</a>
-          <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+          <a href="/login" class="header__btn">Увійти</a>
+          <a href="/register" class="header__btn">Реєстрація</a>
         </div>
         </div>
       </header>
@@ -107,8 +127,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" id="password" name="password" value="<?php echo $password; ?>" required>
 
             <button type="submit" class="button">Увійти</button>
+            
+            <p class="center"><a href="<?= $gclient->createAuthUrl() ?>">Увійдіть за допомогою Google</a> </p>
 
-            <p class="prompt">Ще не зареєстровані? <a href="/portfolio/register">Створіть акаунт</a>.</p>
+            <p class="prompt">Ще не зареєстровані? <a href="/register">Створіть акаунт</a>.</p>
         </form>
       </main>
     </div>    

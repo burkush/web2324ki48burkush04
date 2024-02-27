@@ -1,11 +1,5 @@
 <?php
 
-/* 
-  7ibe]F&3S4^3 - website password
-  Sign in to 000webapp using Google account
-  On local machine, change the links to prepend with /portfolio/<href>
-*/
-
 require_once "../config/database/connectDB.php";
 
 $name = $_POST["name"];

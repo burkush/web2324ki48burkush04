@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $password = trim($_POST["password"]);
     }
     
-    // Check input errors before inserting in database
+    // Check for errors
     if(empty($username_err) && empty($password_err)){
         $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
          
@@ -32,7 +32,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             
             if(mysqli_stmt_execute($stmt)){
-                require_once "../config/profile/startSession.php";
+                session_start();
+                $_SESSION["loggedin"] = true;                         
+                header("Location: ../profile");
             } else {
                 echo "Щось пішло не так. Спробуйте ще раз.";
             }
@@ -64,20 +66,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
           <nav>
             <ul class="navigation">
               <li>
-                <a href="/portfolio">Головна</a>
+                <a href="/">Головна</a>
               </li>
               <li>
-                <a href="/portfolio/about">Про мене</a>
+                <a href="/about">Про мене</a>
               </li>
               <li>
-                <a href="/portfolio/contact">Контакти</a>
+                <a href="/contact">Контакти</a>
               </li>
             </ul>
           </nav>
 
         <div class="header__account">
-          <a href="/portfolio/login" class="header__btn">Увійти</a>
-          <a href="/portfolio/register" class="header__btn">Реєстрація</a>
+          <a href="/login" class="header__btn">Увійти</a>
+          <a href="/register" class="header__btn">Реєстрація</a>
         </div>
         </div>
       </header>
@@ -103,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <button type="submit" class="button">Зареєструвати</button>
 
-            <p class="prompt">Уже зареєстровані? <a href="/portfolio/login">Увійдіть</a>.</p>
+            <p class="prompt">Уже зареєстровані? <a href="/login">Увійдіть</a>.</p>
         </form>
       </main>
     </div>    

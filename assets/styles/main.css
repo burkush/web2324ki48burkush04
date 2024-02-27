@@ -50,6 +50,10 @@ img {
   font-size: 1.2rem;
 }
 
+.center {
+  text-align: center;
+}
+
 .alert {
   color: #fc363b;
   text-align: center;
