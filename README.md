@@ -6,6 +6,3 @@ This is the repository for the university web development course. It will contai
 | ------------- |:-------------:|
 | Group     | KI-48     |
 | Number      | 4    |
-
-# Technologies
-According to the task, I will use HTML, CSS, JavaScript, PHP, and MySQL.
