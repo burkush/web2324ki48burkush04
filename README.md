@@ -8,15 +8,15 @@ This is the repository for the university web development course. It will contai
 | ------ | :---------------: |
 | Group  |       KI-48       |
 | Number |         4         |
-| Task   |   DDOS website    |
+| Task   |   Create personal website    |
 
 # Technologies
 
-According to the task, I will use HTML, CSS, JavaScript, PHP, MySQL, and Google API.
+According to the task, I will use HTML, CSS, JavaScript, PHP, and MySQL.
 
 # Task details
 
-The purpose of the laboratory work #1 is to create the GitHub repository and set it up for further tasks.
+The purpose of the laboratory work #2 is to create a personal website using the recommended technologies.
 
 # How to run the project
 
