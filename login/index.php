@@ -3,10 +3,13 @@
 require_once "../config/database/connectDB.php";
 require_once('../vendor/autoload.php');
 
+$dotenv = Dotenv\Dotenv::createImmutable('../');
+$dotenv->load();
+
 // Google login
-$clientID = $_SERVER['client_id'];
-$secret = $_SERVER['client_secret'];
-$redirectUri = "https://personweblpnu.000webhostapp.com/profile"; // http://localhost/portfolio/profile
+$clientID = $_ENV['CLIENT_ID'];
+$secret = $_ENV['CLIENT_SECRET'];
+$redirectUri = "http://localhost/portfolio/profile";
 
 $gclient = new Google_Client();
 $gclient->setClientId($clientID);
@@ -85,27 +88,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="wrapper">
       <header class="header">
         <div class="header__container container">
-          <a href="/">
+          <a href="/portfolio">
             <img src="../assets/img/cat.svg" alt="Cat" width="40" height="40">
           </a>
 
           <nav>
             <ul class="navigation">
               <li>
-                <a href="/">Головна</a>
+                <a href="/portfolio">Головна</a>
               </li>
               <li>
-                <a href="/about">Про мене</a>
+                <a href="/portfolio/about">Про мене</a>
               </li>
               <li>
-                <a href="/contact">Контакти</a>
+                <a href="/portfolio/contact">Контакти</a>
               </li>
             </ul>
           </nav>
 
         <div class="header__account">
-          <a href="/login" class="header__btn">Увійти</a>
-          <a href="/register" class="header__btn">Реєстрація</a>
+          <a href="/portfolio/login" class="header__btn">Увійти</a>
+          <a href="/portfolio/register" class="header__btn">Реєстрація</a>
         </div>
         </div>
       </header>
@@ -130,7 +133,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             
             <p class="center"><a href="<?= $gclient->createAuthUrl() ?>">Увійдіть за допомогою Google</a> </p>
 
-            <p class="prompt">Ще не зареєстровані? <a href="/register">Створіть акаунт</a>.</p>
+            <p class="prompt">Ще не зареєстровані? <a href="/portfolio/register">Створіть акаунт</a>.</p>
         </form>
       </main>
     </div>    

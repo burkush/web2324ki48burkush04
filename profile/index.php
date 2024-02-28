@@ -12,26 +12,26 @@
 
     <header class="header">
       <div class="header__container container">
-        <a href="/">
+        <a href="/portfolio">
           <img src="../assets/img/cat.svg" alt="Cat" width="40" height="40">
         </a>
 
         <nav>
           <ul class="navigation">
             <li>
-              <a href="/">Головна</a>
+              <a href="/portfolio">Головна</a>
             </li>
             <li>
-              <a href="/about">Про мене</a>
+              <a href="/portfolio/about">Про мене</a>
             </li>
             <li>
-              <a href="/contact">Контакти</a>
+              <a href="/portfolio/contact">Контакти</a>
             </li>
           </ul>
         </nav>
 
         <div class="header__account">
-          <a href="/logout" class="header__btn">Вийти</a>
+          <a href="/portfolio/logout" class="header__btn">Вийти</a>
         </div>
       </div>
     </header>

@@ -20,4 +20,6 @@ The purpose of the laboratory work #4 is to add authentication functionality usi
 
 # How to run the project
 
-You can access the website using this [link](https://personweblpnu.000webhostapp.com/). Alternatively, you can download the repository and run it locally via XAMPP.
+You can access the website using this [link](https://personweblpnu.000webhostapp.com/). Note that the Google Auth doesn't work there because of hosting restrictions (but it works fine on local server).
+
+Alternatively, you can download the repository and run it locally via XAMPP.

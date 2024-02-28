@@ -12,27 +12,27 @@
 
   <header class="header">
     <div class="header__container container">
-      <a href="/">
+      <a href="/portfolio">
         <img src="../assets/img/cat.svg" alt="Cat" width="40" height="40">
       </a>
 
       <nav>
         <ul class="navigation">
           <li>
-            <a href="/">Головна</a>
+            <a href="/portfolio">Головна</a>
           </li>
           <li>
-            <a href="/about" class="active">Про мене</a>
+            <a href="/portfolio/about" class="active">Про мене</a>
           </li>
           <li>
-            <a href="/contact">Контакти</a>
+            <a href="/portfolio/contact">Контакти</a>
           </li>
         </ul>
       </nav>
 
       <div class="header__account">
-        <a href="/login" class="header__btn">Увійти</a>
-        <a href="/register" class="header__btn">Реєстрація</a>
+        <a href="/portfolio/login" class="header__btn">Увійти</a>
+        <a href="/portfolio/register" class="header__btn">Реєстрація</a>
       </div>
     </div>
   </header>
