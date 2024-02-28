@@ -8,11 +8,11 @@ This is the repository for the university web development course. It will contai
 | ------ | :---------------: |
 | Group  |       KI-48       |
 | Number |         4         |
-| Task   |  Authentication   |
+| Task   |  Implement authentication   |
 
 # Technologies
 
-According to the task, I will use HTML, CSS, JavaScript, PHP, MySQL, and Google API.
+For this task, I will use PHP, MySQL, and Google Auth library.
 
 # Task details
 
@@ -20,6 +20,6 @@ The purpose of the laboratory work #4 is to add authentication functionality usi
 
 # How to run the project
 
-You can access the website using this [link](https://personweblpnu.000webhostapp.com/). Note that the Google Auth doesn't work there because of hosting restrictions (but it works fine on local server).
+You can access the website using this [link](https://personweblpnu.000webhostapp.com/). *Note that the Google Auth doesn't work there because of the hosting service restrictions (everything works fine on local server).*
 
 Alternatively, you can download the repository and run it locally via XAMPP.
