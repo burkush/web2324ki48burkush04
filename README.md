@@ -8,18 +8,16 @@ This is the repository for the university web development course. It will contai
 | ------ | :---------------: |
 | Group  |       KI-48       |
 | Number |         4         |
-| Task   |  Authentication   |
+| Task   |  DDoS website   |
 
 # Technologies
 
-According to the task, I will use HTML, CSS, JavaScript, PHP, MySQL, and Google API.
+To complete this task, I only need to use JavaScript.
 
 # Task details
 
-The purpose of the laboratory work #4 is to add authentication functionality using both password and Google Auth.
+The purpose of the laboratory work #5 is to create a malicious website according to the task.
 
 # How to run the project
 
-You can access the website using this [link](https://personweblpnu.000webhostapp.com/). Note that the Google Auth doesn't work there because of hosting restrictions (but it works fine on local server).
-
-Alternatively, you can download the repository and run it locally via XAMPP.
+You can download the repository and run it locally via XAMPP.
