@@ -8,16 +8,16 @@ This is the repository for the university web development course. It will contai
 | ------ | :---------------: |
 | Group  |       KI-48       |
 | Number |         4         |
-| Task   |   DDOS website    |
+| Task   |   Deploy the website to a hosting service    |
 
 # Technologies
 
-According to the task, I will use HTML, CSS, JavaScript, PHP, MySQL, and Google API.
+For this task, I will use the free hosting service [000webhost](https://www.000webhost.com/).
 
 # Task details
 
-The purpose of the laboratory work #1 is to create the GitHub repository and set it up for further tasks.
+The purpose of the laboratory work #3 is to deploy the website to a hosting service.
 
 # How to run the project
 
-For now, you can simply download this repository and run it locally using XAMPP. You need to place the downloaded folder inside _htdocs_ directory in your XAMPP folder. Then launch the XAMPP local server and you're good to go!
+You can access the deployed website using this [link](https://personweblpnu.000webhostapp.com/).
