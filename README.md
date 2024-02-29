@@ -13,3 +13,7 @@ For this task, I only need Git and GitHub.
 
 # Task details
 The purpose of the laboratory work #1 is to create the GitHub repository and set it up for further tasks.
+=======
+
+# Technologies
+According to the task, I will use HTML, CSS, JavaScript, PHP, and MySQL.
